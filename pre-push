@@ -1,0 +1,17 @@
+#!/bin/sh
+GIT_DIR="$(git rev-parse --git-dir)"
+basename=${GIT_DIR%%.*}
+./lintroller $basename
+
+errorPresent=$?
+
+	if [ $errorPresent -ne 0 ]
+	 then
+		/bin/echo -e "\e[1;31m Failed lintroller test.\e[0m"
+		exit 1
+	else 
+		 /bin/echo -e "\e[1;32m Passed lintroller test.\e[0m"
+		exit 0
+	fi            
+
+~              
