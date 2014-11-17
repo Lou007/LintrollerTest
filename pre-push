@@ -1,17 +1,35 @@
 #!/bin/sh
-GIT_DIR="$(git rev-parse --git-dir)"
-basename=${GIT_DIR%%.*}
-./lintroller $basename
+GET_DIR="$(git rev-parse --show-toplevel)"
+lintroller $GET_DIR
 
 errorPresent=$?
 
-	if [ $errorPresent -ne 0 ]
-	 then
-		/bin/echo -e "\e[1;31m Failed lintroller test.\e[0m"
-		exit 1
-	else 
-		 /bin/echo -e "\e[1;32m Passed lintroller test.\e[0m"
-		exit 0
-	fi            
+	if [ $errorPresent -eq 1 ]
 
-~              
+         then
+                /bin/echo -e "\e[1;31m Overridable banned functions found by Lint Roller. Do you want to continue pushing? Y or N: \e[0m"
+
+       	 read response
+
+                        if [[ "YesyesYES" ==  *"$response"* ]] 
+                         
+			then
+                                exit 0
+                        else
+                                exit 1
+                        fi
+
+
+         elif [ $errorPresent -eq 2 ]
+
+         then
+                /bin/echo -e "\e[1;31m Non-overridable banned functions found by Lint Roller. Please correct your code for banned functions and try to push again.\e[0m"
+
+                exit 1
+
+        else
+
+             /bin/echo -e "\e[1;32m Congratulations!!! Your code passed Lint Roller test.\e[0m"
+             exit 0
+        fi
+~          

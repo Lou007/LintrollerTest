@@ -1,0 +1,14 @@
+FINAL RESULTS:
+
+
+COPYRIGHT INFO:
+test2.c: Incorrect
+
+
+ANALYSIS SUMMARY:
+No hits found.
+Lines analyzed = 1 in approximately 0.08 seconds (12 lines/second)
+Physical Source Lines of Code (SLOC) = 1
+Hits@level = [0]   0 [1]   0 [2]   0 [3]   0 [4]   0 [5]   0
+Hits@level+ = [0+]   0 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0
+Hits/KSLOC@level+ = [0+]   0 [1+]   0 [2+]   0 [3+]   0 [4+]   0 [5+]   0
