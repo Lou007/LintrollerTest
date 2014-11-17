@@ -1,0 +1,130 @@
+FINAL RESULTS:
+/home/lou/Desktop/FinalTest/TestDocs/flawtest.c:17:  [5] (buffer) strncat: 
+  Easily used incorrectly (e.g., incorrectly computing the correct maximum 
+  size to add) (CWE-120). Consider strcat_s, strlcat, or automatically 
+  resizing strings. Risk is high; the length parameter appears to be a 
+  constant, instead of computing the number of characters left. 
+/home/lou/Desktop/FinalTest/TestDocs/flawtest.c:18:  [5] (buffer) _tcsncat: 
+  Easily used incorrectly (e.g., incorrectly computing the correct maximum 
+  size to add) (CWE-120). Consider strcat_s, strlcat, or automatically 
+  resizing strings. Risk is high; the length parameter appears to be a 
+  constant, instead of computing the number of characters left. 
+/home/lou/Desktop/FinalTest/TestDocs/flawtest.c:21:  [5] (buffer) MultiByteToWideChar: 
+  Requires maximum length in CHARACTERS, not bytes (CWE-120). Risk is high, 
+  it appears that the size is given as bytes, but the function requires size 
+  as characters. 
+/home/lou/Desktop/FinalTest/TestDocs/flawtest.c:10:  [4.0] (buffer) _mbscpy: 
+  Does not check for buffer overflows when copying to destination (CWE-120). 
+  Consider using a function version that stops copying at the end of the 
+  buffer. 
+/home/lou/Desktop/FinalTest/TestDocs/flawtest.c:13:  [4.0] (buffer) lstrcat: 
+  Does not check for buffer overflows when concatenating to destination 
+  (CWE-120). 
+/home/lou/Desktop/FinalTest/TestDocs/flawtest1.cpp:18:  [4.0] (buffer) strcpy: 
+  Does not check for buffer overflows when copying to destination (CWE-120). 
+  Consider using strcpy_s, strncpy, or strlcpy (warning, strncpy is easily 
+  misused). 
+/home/lou/Desktop/FinalTest/TestDocs/flawtest1.cpp:24:  [4.0] (buffer) sprintf: 
+  Does not check for buffer overflows (CWE-120). Use sprintf_s, snprintf, or 
+  vsnprintf. 
+/home/lou/Desktop/FinalTest/TestDocs/flawtest1.cpp:32:  [4.0] (format) snprintf: 
+  If format strings can be influenced by an attacker, they can be + 
+  exploited, and note that sprintf variations do not always \\0-terminate 
+  (CWE-134). Use a constant for the format specification. 
+/home/lou/Desktop/FinalTest/TestDocs/flawtest1.cpp:33:  [4.0] (shell) popen: 
+  This causes a new program to execute and is difficult to use safely 
+  (CWE-78). try using a library call that implements the same functionality 
+  if available. 
+/home/lou/Desktop/FinalTest/TestDocs/flawtest1.cpp:42:  [4.0] (format) printf: 
+  If format strings can be influenced by an attacker, they can be exploited 
+  (CWE-134). Use a constant for the format specification. 
+/home/lou/Desktop/FinalTest/TestDocs/junk.c:7:  [4.0] (buffer) fscanf: 
+  The scanf() family's %s operation, without a limit specification, permits 
+  buffer overflows (CWE-120, CWE-20). Specify a limit to %s, or use a 
+  different input function. 
+/home/lou/Desktop/FinalTest/TestDocs/junk.c:9:  [4.0] (buffer) strcpy: 
+  Does not check for buffer overflows when copying to destination (CWE-120). 
+  Consider using strcpy_s, strncpy, or strlcpy (warning, strncpy is easily 
+  misused). 
+/home/lou/Desktop/FinalTest/TestDocs/flawtest1.cpp:22:  [3.0] (buffer) getenv: 
+  Environment variables are untrustable input if they can be set by an 
+  attacker. They can have any content and length, and the same variable can 
+  be set more than once (CWE-807, CWE-20). 
+/home/lou/Desktop/FinalTest/TestDocs/flawtest1.cpp:24:  [3.0] (buffer) getenv: 
+  Environment variables are untrustable input if they can be set by an 
+  attacker. They can have any content and length, and the same variable can 
+  be set more than once (CWE-807, CWE-20). 
+/home/lou/Desktop/FinalTest/TestDocs/flawtest.c:6:  [2.0] (buffer) char: 
+  Statically-sized arrays can be improperly restricted, + leading to 
+  potential overflows or other issues (CWE-119:CWE-120). Perform bounds 
+  checking, use functions that limit length, + or ensure that the size is 
+  larger than the maximum possible length. 
+/home/lou/Desktop/FinalTest/TestDocs/flawtest.c:7:  [2.0] (buffer) char: 
+  Statically-sized arrays can be improperly restricted, + leading to 
+  potential overflows or other issues (CWE-119:CWE-120). Perform bounds 
+  checking, use functions that limit length, + or ensure that the size is 
+  larger than the maximum possible length. 
+/home/lou/Desktop/FinalTest/TestDocs/flawtest.c:11:  [2.0] (buffer) memcpy: 
+  Does not check for buffer overflows when copying to destination (CWE-120). 
+  Make sure destination can always hold the source data. 
+/home/lou/Desktop/FinalTest/TestDocs/flawtest.c:12:  [2.0] (buffer) CopyMemory: 
+  Does not check for buffer overflows when copying to destination (CWE-120). 
+  Make sure destination can always hold the source data. 
+/home/lou/Desktop/FinalTest/TestDocs/flawtest1.cpp:10:  [2.0] (buffer) char: 
+  Statically-sized arrays can be improperly restricted, + leading to 
+  potential overflows or other issues (CWE-119:CWE-120). Perform bounds 
+  checking, use functions that limit length, + or ensure that the size is 
+  larger than the maximum possible length. 
+/home/lou/Desktop/FinalTest/TestDocs/flawtest1.cpp:11:  [2.0] (buffer) char: 
+  Statically-sized arrays can be improperly restricted, + leading to 
+  potential overflows or other issues (CWE-119:CWE-120). Perform bounds 
+  checking, use functions that limit length, + or ensure that the size is 
+  larger than the maximum possible length. 
+/home/lou/Desktop/FinalTest/TestDocs/flawtest1.cpp:12:  [2.0] (buffer) char: 
+  Statically-sized arrays can be improperly restricted, + leading to 
+  potential overflows or other issues (CWE-119:CWE-120). Perform bounds 
+  checking, use functions that limit length, + or ensure that the size is 
+  larger than the maximum possible length. 
+/home/lou/Desktop/FinalTest/TestDocs/junk.c:5:  [2.0] (buffer) char: 
+  Statically-sized arrays can be improperly restricted, + leading to 
+  potential overflows or other issues (CWE-119:CWE-120). Perform bounds 
+  checking, use functions that limit length, + or ensure that the size is 
+  larger than the maximum possible length. 
+/home/lou/Desktop/FinalTest/TestDocs/flawtest.c:14:  [1.0] (buffer) strncpy: 
+  Easily used incorrectly; doesn't always \\0-terminate or + check for 
+  invalid pointers (CWE-120). 
+/home/lou/Desktop/FinalTest/TestDocs/flawtest.c:15:  [1.0] (buffer) _tcsncpy: 
+  Easily used incorrectly; doesn't always \\0-terminate or + check for 
+  invalid pointers (CWE-120). 
+/home/lou/Desktop/FinalTest/TestDocs/flawtest.c:16:  [1.0] (buffer) strncat: 
+  Easily used incorrectly (e.g., incorrectly computing the correct maximum 
+  size to add) (CWE-120). Consider strcat_s, strlcat, or automatically 
+  resizing strings. 
+/home/lou/Desktop/FinalTest/TestDocs/flawtest.c:19:  [1.0] (buffer) strlen: 
+  Does not handle strings that are not \\0-terminated; if given one it may 
+  perform an over-read (it could cause a crash if unprotected) (CWE-126). 
+/home/lou/Desktop/FinalTest/TestDocs/flawtest.c:23:  [1] (buffer) MultiByteToWideChar: 
+  Requires maximum length in CHARACTERS, not bytes (CWE-120). Risk is very 
+  low, the length appears to be in characters not bytes. 
+/home/lou/Desktop/FinalTest/TestDocs/flawtest1.cpp:28:  [1] (buffer) strcpy: 
+  Does not check for buffer overflows when copying to destination (CWE-120). 
+  Consider using strcpy_s, strncpy, or strlcpy (warning, strncpy is easily 
+  misused). Risk is low because the source is a constant character. 
+
+
+COPYRIGHT INFO:
+/home/lou/Desktop/FinalTest/TestDocs/hello.cpp: Incorrect
+/home/lou/Desktop/FinalTest/TestDocs/junk.c: Incorrect
+/home/lou/Desktop/FinalTest/TestDocs/flawtest.c: Incorrect
+/home/lou/Desktop/FinalTest/TestDocs/test2.c: Incorrect
+/home/lou/Desktop/FinalTest/TestDocs/flawtest1.cpp: Incorrect
+
+
+ANALYSIS SUMMARY:
+Hits = 28
+Lines analyzed = 105 in approximately 0.32 seconds (330 lines/second)
+Physical Source Lines of Code (SLOC) = 92
+Hits@level = [0]   0 [1]   6 [2]   8 [3]   2 [4]   9 [5]   3
+Hits@level+ = [0+]  28 [1+]  28 [2+]  22 [3+]  14 [4+]  12 [5+]   3
+Hits/KSLOC@level+ = [0+] 304.348 [1+] 304.348 [2+] 239.13 [3+] 152.174 [4+] 130.435 [5+] 32.6087
+Dot directories skipped = 5 (--followdotdir overrides)
