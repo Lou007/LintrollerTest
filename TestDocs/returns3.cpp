@@ -1,8 +1,4 @@
 //DEFINE COPYRIGHT IN THIS FILE
-
-
-
-
 #include <cstdlib>
  
 
