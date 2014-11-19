@@ -1,7 +1,6 @@
 //DEFINE COPYRIGHT IN THIS FILE
 #include <cstdlib>
  
-
 int main()
 {
     std::system("ls -l >test.txt");
