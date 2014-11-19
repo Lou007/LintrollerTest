@@ -1,0 +1,22 @@
+FINAL RESULTS:
+/home/lou/Desktop/FinalTest/TestDocs/returns3.cpp:11:  [5.0] (race) chmod: 
+  his accepts filename arguments; if an attacker can move those files, a race 
+  condition results. (CWE-362). Use fchmod( ) instead. 
+/home/lou/Desktop/FinalTest/TestDocs/returns3.cpp:10:  [4.0] (shell) system: 
+  This causes a new program to execute and is difficult to use safely 
+  (CWE-78). try using a library call that implements the same functionality 
+  if available. 
+
+
+COPYRIGHT INFO:
+/home/lou/Desktop/FinalTest/TestDocs/returns3.cpp: Correct
+
+
+ANALYSIS SUMMARY:
+Hits = 2
+Lines analyzed = 14 in approximately 0.09 seconds (160 lines/second)
+Physical Source Lines of Code (SLOC) = 13
+Hits@level = [0]   0 [1]   0 [2]   0 [3]   0 [4]   1 [5]   1
+Hits@level+ = [0+]   2 [1+]   2 [2+]   2 [3+]   2 [4+]   2 [5+]   1
+Hits/KSLOC@level+ = [0+] 153.846 [1+] 153.846 [2+] 153.846 [3+] 153.846 [4+] 153.846 [5+] 76.9231
+Dot directories skipped = 5 (--followdotdir overrides)

@@ -1,0 +1,49 @@
+FINAL RESULTS:
+/home/lou/Desktop/FinalTest/TestDocs/flawtest.c:12:  [5] (buffer) MultiByteToWideChar: 
+  Requires maximum length in CHARACTERS, not bytes (CWE-120). Risk is high, 
+  it appears that the size is given as bytes, but the function requires size 
+  as characters. 
+/home/lou/Desktop/FinalTest/TestDocs/returns3.cpp:11:  [5.0] (race) chmod: 
+  his accepts filename arguments; if an attacker can move those files, a race 
+  condition results. (CWE-362). Use fchmod( ) instead. 
+/home/lou/Desktop/FinalTest/TestDocs/returns2.cpp:10:  [4.0] (shell) system: 
+  This causes a new program to execute and is difficult to use safely 
+  (CWE-78). try using a library call that implements the same functionality 
+  if available. 
+/home/lou/Desktop/FinalTest/TestDocs/returns3.cpp:10:  [4.0] (shell) system: 
+  This causes a new program to execute and is difficult to use safely 
+  (CWE-78). try using a library call that implements the same functionality 
+  if available. 
+/home/lou/Desktop/FinalTest/TestDocs/flawtest.c:6:  [2.0] (buffer) char: 
+  Statically-sized arrays can be improperly restricted, + leading to 
+  potential overflows or other issues (CWE-119:CWE-120). Perform bounds 
+  checking, use functions that limit length, + or ensure that the size is 
+  larger than the maximum possible length. 
+/home/lou/Desktop/FinalTest/TestDocs/flawtest.c:7:  [2.0] (buffer) char: 
+  Statically-sized arrays can be improperly restricted, + leading to 
+  potential overflows or other issues (CWE-119:CWE-120). Perform bounds 
+  checking, use functions that limit length, + or ensure that the size is 
+  larger than the maximum possible length. 
+/home/lou/Desktop/FinalTest/TestDocs/flawtest.c:10:  [1.0] (buffer) strlen: 
+  Does not handle strings that are not \\0-terminated; if given one it may 
+  perform an over-read (it could cause a crash if unprotected) (CWE-126). 
+/home/lou/Desktop/FinalTest/TestDocs/flawtest.c:14:  [1] (buffer) MultiByteToWideChar: 
+  Requires maximum length in CHARACTERS, not bytes (CWE-120). Risk is very 
+  low, the length appears to be in characters not bytes. 
+
+
+COPYRIGHT INFO:
+/home/lou/Desktop/FinalTest/TestDocs/returns0.cpp: Correct
+/home/lou/Desktop/FinalTest/TestDocs/returns2.cpp: Correct
+/home/lou/Desktop/FinalTest/TestDocs/flawtest.c: Incorrect
+/home/lou/Desktop/FinalTest/TestDocs/returns3.cpp: Correct
+
+
+ANALYSIS SUMMARY:
+Hits = 8
+Lines analyzed = 82 in approximately 0.29 seconds (282 lines/second)
+Physical Source Lines of Code (SLOC) = 77
+Hits@level = [0]   0 [1]   2 [2]   2 [3]   0 [4]   2 [5]   2
+Hits@level+ = [0+]   8 [1+]   8 [2+]   6 [3+]   4 [4+]   4 [5+]   2
+Hits/KSLOC@level+ = [0+] 103.896 [1+] 103.896 [2+] 77.9221 [3+] 51.9481 [4+] 51.9481 [5+] 25.974
+Dot directories skipped = 5 (--followdotdir overrides)
